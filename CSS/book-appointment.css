@@ -1,0 +1,463 @@
+/* Google Fonts Import (Move to HTML head for better performance) */
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Root Variables for Colors */
+:root {
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+    --skin-color: #ec1839;
+    --wp--preset--color--black: #000000;
+    --wp--preset--color--cyan-bluish-gray: #abb8c3;
+    --wp--preset--color--white: #ffffff;
+    --wp--preset--color--pale-pink: #f78da7;
+    --wp--preset--color--vivid-red: #cf2e2e;
+    --wp--preset--color--luminous-vivid-orange: #ff6900;
+    --wp--preset--color--luminous-vivid-amber: #fcb900;
+    --wp--preset--color--light-green-cyan: #7bdcb5;
+    --wp--preset--color--vivid-green-cyan: #00d084;
+    --wp--preset--color--pale-cyan-blue: #8ed1fc;
+    --wp--preset--color--vivid-cyan-blue: #0693e3;
+    --wp--preset--color--vivid-purple: #9b51e0;
+    --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+    --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+    --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+    --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+    --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+    --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+    --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+    --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+    --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+    --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+    --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+    --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+    --wp--preset--font-size--small: 13px;
+    --wp--preset--font-size--medium: 20px;
+    --wp--preset--font-size--large: 36px;
+    --wp--preset--font-size--x-large: 42px;
+    --wp--preset--spacing--20: 0.44rem;
+    --wp--preset--spacing--30: 0.67rem;
+    --wp--preset--spacing--40: 1rem;
+    --wp--preset--spacing--50: 1.5rem;
+    --wp--preset--spacing--60: 2.25rem;
+    --wp--preset--spacing--70: 3.38rem;
+    --wp--preset--spacing--80: 5.06rem;
+    --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+    --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+    --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+    --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+}
+
+
+
+li {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    width: 100%;
+}
+
+/* Section Styling */
+.section {
+    background: var(--wp--preset--color--white);
+    min-height: 100vh;
+    display: block;
+    opacity: 1;
+}
+
+/* Header and Navigation */
+header {
+    height: 13vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: transparent;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    /* box-shadow: var(--wp--preset--shadow--natural); */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+}
+
+header.scrolled {
+    background: rgba(221, 15, 108, 0.533);
+    /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    box-shadow: var(--wp--preset--shadow--natural);
+    transition: 0.5s ease-in-out;
+}
+
+nav .logo a {
+    color: var(--text-black-900);
+}
+
+
+/* Navigation Links */
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-black-900);
+    padding: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--skin-color);
+    /* Hover effect */
+}
+
+
+/* Button Styling */
+.btn {
+    border: 1px solid;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    background: var(--skin-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: darken(var(--skin-color), 10%);
+    /* Darken on hover */
+}
+
+/* Book Appointment Button */
+.book-appointment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+}
+
+.book-appointment:hover {
+    border: 1px solid var(--text-black-700);
+}
+
+/* Burger Menu (Hidden by default) */
+.burger {
+    display: none;
+}
+
+/* Close Button (Hidden by default) */
+.close {
+    display: none;
+}
+
+.page-1 {
+    height: 70vh;
+    width: 100%;
+    background: url('/Images/slide-1.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-1 .content {
+    text-align: center;
+    width: 85%;
+}
+
+.page-1 h1 {
+    font-size: 5rem;
+    color: white;
+    font-weight: 500;
+    font-family: "Merienda";
+    margin: 30px;
+}
+
+.page-1 h5 {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+.page-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    width: 85%;
+    margin-top: 10vh;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact .contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.contact .contact-form .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 30px;
+}
+
+.contact .contact-form .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 30px;
+}
+
+.contact .contact-form .form-item {
+    margin-bottom: 30px;
+}
+
+.contact .contact-form .form-item .form-control {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+
+.contact .contact-form .form-item .form-control:focus {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.contact .contact-form .form-item textarea.form-control {
+    height: 140px;
+}
+
+
+
+
+.form-group .error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+.contact .contact-form .btn {
+    height: 50px;
+    padding: 0 50px;
+}
+
+.contact .contact-form .btn:hover {
+    color: var(--text-black-900);
+    border: 1px solid var(--text-black-700);
+}
+
+.insta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insta h5 {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.insta a {
+    color: var(--text-black-900);
+}
+
+.insta a:hover {
+    color: var(--skin-color);
+}
+
+.img-section {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-section .img {
+    flex: 0 0 16.6%;
+    max-width: 16.66%;
+    padding: 10px;
+}
+
+.img-section .img img {
+    width: 100%;
+}
+
+.details-section {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid;
+}
+
+.details-section .details {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px 80px 0px;
+    line-height: 5vh;
+}
+
+.details-section .details h2 {
+    color: var(--text-black-900);
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: 'Merienda';
+    padding: 30px 0px;
+}
+
+.details-section .details p {
+    color: var(--text-black-700);
+}
+
+.copy-rights {
+    padding: 20px;
+    color: var(--text-black-700);
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 576px) {
+
+
+    .burger {
+        display: block;
+        /* Show burger on smaller screens */
+    }
+
+    nav .sidebar {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        border: 1px solid var(--text-black-700);
+    }
+
+    header nav .sidebar {
+        display: none;
+        background-color: rgb(253, 253, 253);
+        background-blend-mode: darken;
+
+    }
+
+    header nav .sidebar a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .sidebar.open {
+        display: flex;
+    }
+
+    .close {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        display: block;
+    }
+
+    .section {
+        overflow: hidden;
+    }
+
+    .page-1 {
+        background-position: center;
+    }
+
+    .page-1 h1 {
+        font-size: 2rem;
+    }
+
+    .contact .contact-form .col-12 {
+        padding: 0px;
+    }
+
+    .contact .contact-form .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0px;
+    }
+
+    .insta h5 {
+        padding-top: 10%;
+        padding-bottom: 6%;
+        font-size: medium;
+    }
+
+    .img-section {
+        width: 90%;
+    }
+
+    .img-section .img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .details-section .details {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+
+    .copy-rights {
+        font-size: small;
+    }
+}

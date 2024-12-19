@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #262627;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: var(--skin-color);
+    /* background: linear-gradient(135deg, #f57308, #fff, rgb(11, 242, 7)); */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ededee;
+    /* background: linear-gradient(135deg, #1a6ad2, #fff, rgb(245, 5, 53)); */
+}

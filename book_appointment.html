@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment-Kanish Studio</title>
+    <link rel="stylesheet" href="CSS/book-appointment.css">
+    <link rel="stylesheet" href="CSS/webkit-scroll.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+    <!-- Main container start -->
+    <div class="main-container">
+        <header id="header">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>KANISH <br><span>BEAUTY STUDIO</span></h1>
+                    </a>
+                </div>
+
+                <!-- Sidebar with links -->
+                <ul class="sidebar" id="sidebar">
+                    <li onclick="hideSidebar()" class="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!-- <li><a href="#">Blog</a></li> -->
+                    <li><a href="#" class="btn book-appointment">BOOK ONLINE</a></li>
+                </ul>
+
+                <!-- Burger Menu for mobile view -->
+                <div class="burger" onclick="showSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"
+                        fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                </div>
+            </nav>
+        </header>
+        <div class="page-1">
+            <div class="content">
+                <h1>Book an Appointment</h1>
+                <h5>Please fill out the appointment form below to make appointment</h5>
+            </div>
+        </div>
+
+        <!-- ===== Contact section Start ===== -->
+        <section class="page-2 section">
+            <div class="contact">
+                <form class="form" id="contactForm">
+                    <div class="contact-form padd-15">
+                        <div class="row">
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <label for="firstname">First Name:</label>
+                                    <input type="text" class="form-control" placeholder=" First Name" id="firstname">
+                                    <small class="error-message" id="firstnameError"></small>
+                                </div>
+                            </div>
+
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <label for="firstname">Last Name:</label>
+                                    <input type="text" class="form-control" placeholder=" Last Name" id="lastname">
+                                    <small class="error-message" id="lastnameError"></small>
+                                </div>
+                            </div>
+
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" placeholder="Email" id="email">
+                                    <small class="error-message" id="emailError"></small>
+                                </div>
+                            </div>
+
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone">
+                                    <small class="error-message" id="phoneError"></small>
+                                </div>
+                            </div>
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <label for="service">Select Service :</label>
+                                    <select name="service" class="form-control" id="service">
+                                        <option value="">-- Please select a service --</option>
+                                        <option value="haircut">Hair cut & Styling</option>
+                                        <option value="coloring">Hair Coloring</option>
+                                        <option value="treatment">Hair Treatment</option>
+                                        <option value="extension">Hair Extension</option>
+                                        <option value="skincare">Skin Care & Facial</option>
+                                        <option value="waxing">Body Waxing</option>
+                                        <option value="makeup">Makeup & Eyebrows</option>
+                                        <option value="manicure">Manicure & Pedicure</option>
+                                    </select>
+                                    <small class="error-message" id="serviceError"></small>
+                                </div>
+                            </div>
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <label for="service">Select Staff :</label>
+                                    <select name="staff" class="form-control" id="staff">
+                                        <option value="">-- Please select Staff --</option>
+                                        <option value="staff1">Staff 1</option>
+                                        <option value="staff2">Staff 2</option>
+                                        <option value="staff3">Staff 3</option>
+                                    </select>
+                                    <small class="error-message" id="staffError"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-item col-12 padd-15">
+                                <div class="form-group">
+                                    <label for="service">Subject :</label>
+                                    <input type="text" class="form-control" placeholder="Subject" id="subject">
+                                    <small class="error-message" id="subjectError"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="form-item col-12 padd-15">
+                                <div class="form-group">
+                                    <label for="service">Message :</label>
+                                    <textarea name="" class="form-control" placeholder="Message"
+                                        id="message"></textarea>
+                                    <small class="error-message" id="messageError"></small>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="form-item col-12 padd-15">
+                                <button type="submit" class="btn">Book Appointment</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ===== Contact section End ===== -->
+
+        <!-- insta section Start ===== -->
+        <section class="insta section">
+            <h5> Follow: <a href="">@kanish_studio</a></h5>
+            <div class="img-section">
+                <div class="img">
+                    <img src="Images/409473241_1977368925996796_4447545068520606488_nlow.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="Images/409698869_319188021000566_5899468798016933778_nlow.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="Images/409857907_3650283781910401_8606626918472739113_nlow.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="Images/409861165_895517855308280_2502512911622020907_nlow.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="Images/410173770_1585463148928447_2594125512133271975_nlow.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="Images/410472705_1077829906732165_6123271476274537388_nlow.jpg" alt="">
+                </div>
+            </div>
+            <div class="details-section">
+                <div class="details">
+                    <h2>Our Location</h2>
+                    <p>Reine Studio</p>
+                    <p>Los Angeles, 8721 M</p>
+                    <p>Central Avenue, CA 90036</p>
+                </div>
+                <div class="details">
+                    <h2>Get in Touch</h2>
+                    <p>phone: +12 9 8765 43</p>
+                    <p><a href="">info@themeperch.net</a></p>
+                </div>
+                <div class="details">
+                    <h2>Working Hours</h2>
+                    <p>Mon-Fri: 10:00AM - 9:00PM</p>
+                    <p>Saturday: 10:00 AM - 7:00 PM</p>
+                    <p>Sunday: 10:00 PM - 7:00 PM</p>
+                </div>
+            </div>
+            <div class="copy-rights">
+                <p>Copyright 2024 Kanish. All right reserved</p>
+            </div>
+        </section>
+        <!-- insta section ENd-->
+
+
+    </div>
+    <!-- Main container End -->
+
+    <script src="JS/book-app.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
